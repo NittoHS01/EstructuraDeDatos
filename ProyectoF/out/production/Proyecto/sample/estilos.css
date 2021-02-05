@@ -1,0 +1,26 @@
+.fondoImagen{
+    -fx-background-image: url("img/fondo.png");
+    -fx-background-size: cover;
+}
+.fondoColor{
+    -fx-background-color: #228DFF;
+}
+.textfield{
+    -fx-background-color: #BEE2E7;
+    -fx-background-radius: 10px;
+}
+.cabecera{
+    -fx-background-color: #DC22F5;
+}
+.buttonPrincipal{
+    -fx-background-color: #8F002E;
+    -fx-background-radius: 30px;
+}
+.buttonSecundario1{
+    -fx-background-color: #FF0066;
+    -fx-background-radius: 30px;
+}
+.buttonSecundario2{
+    -fx-background-color: #FFCA1B;
+    -fx-background-radius: 30px;
+}

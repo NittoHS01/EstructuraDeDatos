@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+        <?import javafx.geometry.Insets?>
+        <?import javafx.scene.control.Button?>
+        <?import javafx.scene.control.ComboBox?>
+        <?import javafx.scene.control.Label?>
+        <?import javafx.scene.control.TableView?>
+        <?import javafx.scene.control.TextField?>
+        <?import javafx.scene.image.Image?>
+        <?import javafx.scene.image.ImageView?>
+        <?import javafx.scene.layout.BorderPane?>
+        <?import javafx.scene.layout.HBox?>
+        <?import javafx.scene.layout.Pane?>
+        <?import javafx.scene.layout.VBox?>
+        <?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="524.0" prefWidth="727.0" styleClass="fondoColor" stylesheets="@estilos.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.ControllerCobro">
+<top>
+   <HBox prefHeight="69.0" prefWidth="727.0" styleClass="cabecera" stylesheets="@estilos.css" BorderPane.alignment="CENTER">
+      <children>
+         <VBox prefHeight="69.0" prefWidth="165.0">
+            <children>
+               <Label prefHeight="30.0" prefWidth="194.0" text="Center Game UwU" textFill="WHITE">
+                  <font>
+                     <Font size="18.0" />
+                  </font>
+                  <VBox.margin>
+                     <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                  </VBox.margin>
+               </Label>
+               <Label text="COBRO" textFill="WHITE">
+                  <VBox.margin>
+                     <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                  </VBox.margin>
+               </Label>
+            </children>
+         </VBox>
+         <Pane prefHeight="65.0" prefWidth="362.0" stylesheets="@estilos.css" HBox.hgrow="ALWAYS" />
+         <ImageView fitHeight="55.0" fitWidth="63.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+               <Image url="@img/perfil.png" />
+            </image>
+            <HBox.margin>
+               <Insets bottom="5.0" left="5.0" right="1.0" top="5.0" />
+            </HBox.margin>
+         </ImageView>
+         <VBox prefHeight="200.0" prefWidth="100.0">
+            <children>
+               <Label fx:id="nombreUsuario" text="Label" textFill="WHITE">
+                  <VBox.margin>
+                     <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                  </VBox.margin>
+               </Label>
+               <Button mnemonicParsing="false" onAction="#cerrarSesion" styleClass="buttonPrincipal" text="Cerrar sesión" textFill="WHITE">
+                  <VBox.margin>
+                     <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                  </VBox.margin>
+               </Button>
+            </children>
+         </VBox>
+      </children>
+   </HBox>
+</top>
+<center>
+   <VBox prefHeight="200.0" prefWidth="512.0" stylesheets="@estilos.css" BorderPane.alignment="CENTER">
+      <children>
+         <TableView fx:id="tabla" disable="true" opacity="0.84" prefHeight="254.0" prefWidth="492.0" styleClass="textfield" stylesheets="@estilos.css">
+            <VBox.margin>
+               <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+            </VBox.margin>
+         </TableView>
+         <Label text="Próximos Pedidos" textFill="WHITE">
+            <font>
+               <Font name="System Bold" size="15.0" />
+            </font>
+            <VBox.margin>
+               <Insets bottom="5.0" left="10.0" right="5.0" top="5.0" />
+            </VBox.margin>
+         </Label>
+         <HBox prefHeight="0.0" prefWidth="512.0">
+            <children>
+               <Label text="Nombre: " textFill="WHITE">
+                  <HBox.margin>
+                     <Insets left="10.0" />
+                  </HBox.margin>
+               </Label>
+               <Label fx:id="nombrePedido" textFill="WHITE" />
+               <Pane prefHeight="25.0" prefWidth="299.0" HBox.hgrow="ALWAYS" />
+               <Button mnemonicParsing="false" onAction="#finalizar" prefHeight="25.0" prefWidth="90.0" styleClass="buttonSecundario2" stylesheets="@estilos.css" text="Finalizar" textFill="#20334d">
+                  <HBox.margin>
+                     <Insets right="10.0" />
+                  </HBox.margin>
+               </Button>
+            </children>
+         </HBox>
+         <HBox prefHeight="14.0" prefWidth="492.0">
+            <children>
+               <HBox prefHeight="25.0" prefWidth="665.0">
+                  <children>
+                     <Pane prefHeight="25.0" prefWidth="493.0" />
+                     <Button mnemonicParsing="false" onAction="#status" prefHeight="25.0" prefWidth="761.0" styleClass="buttonSecundario1" stylesheets="@estilos.css" text="Ver status del cliente" textFill="WHITE">
+                        <HBox.margin>
+                           <Insets right="10.0" />
+                        </HBox.margin>
+                     </Button>
+                     <Label prefHeight="17.0" prefWidth="509.0" text="Cliente: " textFill="WHITE">
+                        <HBox.margin>
+                           <Insets top="5.0" />
+                        </HBox.margin>
+                     </Label>
+                     <Label fx:id="nombreClinte" prefHeight="17.0" prefWidth="552.0" textFill="WHITE">
+                        <HBox.margin>
+                           <Insets top="5.0" />
+                        </HBox.margin>
+                     </Label>
+                  </children>
+               </HBox>
+            </children>
+            <VBox.margin>
+               <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+            </VBox.margin>
+         </HBox>
+      </children>
+      <BorderPane.margin>
+         <Insets />
+      </BorderPane.margin>
+   </VBox>
+</center>
+<right>
+   <VBox prefHeight="414.0" prefWidth="185.0" BorderPane.alignment="CENTER">
+      <children>
+         <Label text="Consolas" textFill="WHITE">
+            <font>
+               <Font size="24.0" />
+            </font>
+         </Label>
+         <Label text="Modelo" textFill="WHITE" />
+         <ComboBox fx:id="comboTipo" prefHeight="25.0" prefWidth="195.0" styleClass="textfield" />
+         <HBox prefHeight="23.0" prefWidth="185.0">
+            <children>
+               <Label prefHeight="17.0" prefWidth="60.0" text="Capacidad" textFill="WHITE" />
+               <Pane prefHeight="23.0" prefWidth="70.0" />
+               <Label prefHeight="17.0" prefWidth="53.0" text="Unidades" textFill="WHITE" />
+            </children>
+            <VBox.margin>
+               <Insets top="5.0" />
+            </VBox.margin>
+         </HBox>
+         <HBox prefHeight="20.0" prefWidth="185.0">
+            <children>
+               <ComboBox fx:id="comboTamaño" prefHeight="25.0" prefWidth="190.0" styleClass="textfield" />
+               <Pane prefHeight="25.0" prefWidth="93.0" />
+               <TextField fx:id="txtCantidad" prefHeight="25.0" prefWidth="130.0" styleClass="textfield" />
+            </children>
+         </HBox>
+         <Label text="Condicion" textFill="WHITE">
+            <VBox.margin>
+               <Insets top="5.0" />
+            </VBox.margin>
+         </Label>
+         <ComboBox fx:id="comboMarca" prefHeight="25.0" prefWidth="208.0" styleClass="textfield" />
+         <Button mnemonicParsing="false" onAction="#insertarPedido" prefHeight="25.0" prefWidth="198.0" styleClass="buttonSecundario1" stylesheets="@estilos.css" text="Insertar" textFill="WHITE">
+            <VBox.margin>
+               <Insets top="10.0" />
+            </VBox.margin>
+         </Button>
+         <Button mnemonicParsing="false" onAction="#limpiarTabla" styleClass="buttonSecundario1" stylesheets="@estilos.css" text="Limpiar tabla" textFill="WHITE">
+            <VBox.margin>
+               <Insets left="50.0" right="50.0" top="10.0" />
+            </VBox.margin>
+         </Button>
+         <Label fx:id="txtNombreUsuario" text="Nombre cliente" textFill="WHITE">
+            <VBox.margin>
+               <Insets top="20.0" />
+            </VBox.margin>
+         </Label>
+         <TextField fx:id="txtNombre" styleClass="textfield">
+            <VBox.margin>
+               <Insets top="5.0" />
+            </VBox.margin>
+         </TextField>
+         <Button mnemonicParsing="false" onAction="#guardarPedido" prefHeight="25.0" prefWidth="204.0" styleClass="buttonSecundario2" stylesheets="@estilos.css" text="GUARDAR PEDIDO" textFill="#20334d">
+            <font>
+               <Font name="System Bold" size="12.0" />
+            </font>
+            <VBox.margin>
+               <Insets top="10.0" />
+            </VBox.margin>
+         </Button>
+      </children>
+      <BorderPane.margin>
+         <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+      </BorderPane.margin>
+   </VBox>
+</right>
+<bottom>
+   <Button mnemonicParsing="false" onAction="#abrirInventario" prefHeight="31.0" prefWidth="430.0" styleClass="buttonPrincipal" stylesheets="@estilos.css" text="Almacen" textFill="WHITE" BorderPane.alignment="CENTER">
+      <BorderPane.margin>
+         <Insets bottom="30.0" left="30.0" right="30.0" top="30.0" />
+      </BorderPane.margin>
+      <font>
+         <Font size="15.0" />
+      </font>
+   </Button>
+</bottom>
+</BorderPane>
